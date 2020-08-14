@@ -1,0 +1,24 @@
+<h1> How to create Cascading Drop Down (Country and State list) In Angular 6</h1>
+
+<label>Country</label>
+<div  title="Please select the country that the customer will primarily be served from">
+	<select placeholder="Phantasyland" (change)="changeCateg($event.target.value)">
+        <option *ngFor ="let count of transcationsList">{{count.type}} </option>
+    </select>
+</div>
+
+
+<label>City</label>
+<div title="Please select the city that the customer is primarily to be served from.">
+	<select placeholder="Anycity" (change)="setdata($event.target.value)">
+        <option *ngFor ="let city of transcations">{{city.transctionDesc}} </option>
+  </select>
+</div>
+<form [formGroup]="form">
+  <div>
+    <label>
+      <span>Full name</span>
+      <input type="text" class="input" formControlName="name">
+    </label>
+  </div>
+</form>
